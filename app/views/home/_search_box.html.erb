@@ -1,0 +1,24 @@
+<div id="sidebar" class="four columns">
+  <div class="sidebar-box search-listings ">
+    <h3>Encontre seu imóvel:</h3>
+    <p>
+      <input type="radio" name="preco" onClick="show_buy()" checked="checked" value="0">Compra</input>
+      <input type="radio" name="preco" onClick="show_rent()" value="1">Locação</input>
+    </p>
+
+    <%= render partial: 'search_options' %>
+
+    <div>
+      <a id="buscar" class="button soft-green">Buscar</a>
+    </div>
+
+    <br>
+
+    <div>
+      <a id="ref-search" class="button soft-green">Busca referência</a>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+
+</div><!--end sidebar-->
