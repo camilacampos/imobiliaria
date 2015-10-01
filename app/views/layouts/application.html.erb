@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Imobiliaria</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Bons Ares Imóveis</title>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag 'favicon.ico',:type => 'image/png' %>
+    <%= csrf_meta_tags %>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
-<%= yield %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,300italic' rel='stylesheet' type='text/css' />
 
-</body>
+
+    <!--
+     <script type="text/javascript">
+      jQuery(document).ready(function() {
+        jQuery(".orbit-slide, .gallery img").fancybox({
+          mouseWheel : true,
+          fitToView : true,
+          nextEffect : 'fade'
+        });
+        jQuery('ul.menu').tinyNav({
+          active: 'selected'
+        });
+      });
+    </script>
+  -->
+    <style>
+      .homepage-bg {
+        background:#324B73;
+      }
+    </style>
+  </head>
+  <body class="home blog">
+    <%= render partial: 'layouts/header' %>
+    <%= yield %>
+    <%= render partial: 'layouts/footer' %>
+  </body>
 </html>

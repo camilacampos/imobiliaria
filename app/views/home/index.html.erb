@@ -1,196 +1,65 @@
-<!DOCTYPE html>
+<div class="row homepage-bg">
+  <div class="twelve columns centered">
+    <div class="eight columns">
+      <!-- SLIDER HOME-->
+      <div class="featured">
+        <script type="text/javascript">
+          $(window).ready(function() {
+            $('.featured').orbit({
+              animation: 'horizontal-push', // fade, horizontal-slide, vertical-slide, horizontal-push
+              animationSpeed: 4000, // how fast animtions are
+              timer: true, // true or false to have the timer
+              resetTimerOnClick: false, // true resets the timer instead of pausing slideshow progress
+              advanceSpeed: 4000, // if timer is enabled, time between transitions
+              pauseOnHover: true, // if you hover pauses the slider
+              startClockOnMouseOut: true, // if clock should start on MouseOut
+              startClockOnMouseOutAfter: 4000, // how long after MouseOut should the timer start again
+              directionalNav: true // manual advancing directional navs
+            });
+          });
+        </script>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/11/home.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/11/home.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0079-destaque.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0079-destaque.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/12/Home.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/12/Home.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0081-destaque1.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0081-destaque1.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0075-d.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0075-d.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0100-destaque1.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0100-destaque1.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0092-destaque.jpg" rel="grp">
+          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0092-destaque.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
+        </a>
+      </div>
+    </div>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Bons Ares Imóveis</title>
+    <%= render partial: 'search_box' %>
 
-  <link rel="stylesheet" href="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/foundation-custom.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,900italic,300italic' rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/style.css" type="text/css" media="screen" />
-  <link rel="pingback" href="http://www.bonsaresimoveis.com.br/xmlrpc.php" />
+  </div>
+</div>
 
-  <script type='text/javascript' src='http://www.bonsaresimoveis.com.br/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
-  <script type='text/javascript' src='http://www.bonsaresimoveis.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.bonsaresimoveis.com.br/xmlrpc.php?rsd" />
-  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.bonsaresimoveis.com.br/wp-includes/wlwmanifest.xml" />
-  <meta name="generator" content="WordPress 3.8.10" />
-
-  <!--for orbit to work-->
-  <script src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/foundation.js" type="text/javascript"></script>
-
-  <!-- Add mousewheel plugin (this is optional) -->
-  <script type="text/javascript" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/jquery.mousewheel-3.0.6.pack.js"></script>
-
-  <!-- Add fancyBox -->
-  <link rel="stylesheet" href="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/jquery.fancybox.css" type="text/css" media="screen" />
-  <script type="text/javascript" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/app.js"></script>
-  <script type="text/javascript" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/tinynav.js"></script>
-  <link rel="shortcut icon" href="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/images/favicon.ico" />
-
-  <!-- Adicionado por Yuri para Facilitar -->
-  <script src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/javascript.js"></script>
-  <script src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/javascript.js"></script>
-
-  <!-- Fontes -->
-  <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'><!--usando-->
-  <link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Mouse+Memoirs' rel='stylesheet' type='text/css'> <!-- usada no creci -->
-  <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
-
-  <!-- ColorBox -->
-  <link href="demos/colorbox/colorbox.css" rel="stylesheet">
-  <script src="demos/colorbox/jquery.colorbox-min.js"></script>
+<div id="wrap" class="row">
+  <%= render partial: 'real_estates' %>
 
   <script type="text/javascript">
-    jQuery(document).ready(function() {
-      jQuery(".orbit-slide, .gallery img").fancybox({
-        mouseWheel : true,
-        fitToView : true,
-        nextEffect : 'fade'
-      });
-      jQuery('ul.menu').tinyNav({
-        active: 'selected'
-      });
-    });
-  </script>
-
-  <style>
-    .homepage-bg {
-      background:#324B73;
+    function bodyLoad() {
+      parmValue = getParameterByName("myparm");
+      if(parmValue == 'alertMe') {
+        alert('Function successful');
+      }
     }
-  </style>
-</head>
-
-<body  class="home blog">
-  <header>
-    <div class="row">
-      <div id="access" class="twelve columns centered">
-        <div class="menu-header">
-          <ul id="menu-principal" class="menu">
-            <li id="menu-item-115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-115"><%= link_to 'Home', root_path %></li>
-            <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="http://www.bonsaresimoveis.com.br/?page_id=7">Imóveis</a></li>
-            <li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="http://www.bonsaresimoveis.com.br/?page_id=5">Sobre</a></li>
-            <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="http://www.bonsaresimoveis.com.br/?page_id=104">Contato</a></li>
-            <li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="http://www.bonsaresimoveis.com.br/?page_id=631">Formulário de Contato</a></li>
-          </ul>
-        </div>
-      </div><!-- #access -->
-    </div>
-
-    <div class="row">
-      <div class="three columns logo-layer">
-        <a href="http://www.bonsaresimoveis.com.br"><img src="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/09/bonsares-logo.jpg" alt="home" /></a>
-      </div>
-      <div class="one columns header-box hide-for-small">
-        <p class="creci">CRECI 105385</p>
-      </div>
-      <div class="two columns hide-for-small header-box">
-        <img class="header-img" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/images/blue_phone.png" alt="">
-        <p class="header-text">
-          <span>(14) 3882 - 6102</span>
-        </p>
-      </div>
-      <div class="three columns hide-for-small header-box">
-        <img class="header-img" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/images/home-icon.png" alt="">
-        <p class="header-text">
-          Rua Curuzu, 971 - Centro - Botucatu
-        </p>
-      </div>
-      <div class="three columns search-layer hide-for-small">
-        <form role="search" method="get" id="searchform" action="http://www.bonsaresimoveis.com.br/">
-          <input type="text" value="" name="s" id="s" />
-          <input type="submit" id="searchsubmit" value="Search" />
-        </form>
-      </div>
-    </div>
-  </header>
-    <div class="row homepage-bg">
-      <div class="twelve columns centered">
-        <div class="eight columns">
-          <!-- SLIDER HOME-->
-          <div class="featured">
-            <script type="text/javascript">
-              $(window).load(function() {
-                $('.featured').orbit({
-                  animation: 'horizontal-push', // fade, horizontal-slide, vertical-slide, horizontal-push
-                  animationSpeed: 800, // how fast animtions are
-                  timer: true, // true or false to have the timer
-                  resetTimerOnClick: false, // true resets the timer instead of pausing slideshow progress
-                  advanceSpeed: 4000, // if timer is enabled, time between transitions
-                  pauseOnHover: true, // if you hover pauses the slider
-                  startClockOnMouseOut: true, // if clock should start on MouseOut
-                  startClockOnMouseOutAfter: 1000, // how long after MouseOut should the timer start again
-                  directionalNav: true // manual advancing directional navs
-                });
-              });
-            </script>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/11/home.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/11/home.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0079-destaque.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0079-destaque.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/12/Home.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/12/Home.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0081-destaque1.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0081-destaque1.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0075-d.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0075-d.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0100-destaque1.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0100-destaque1.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-            <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0092-destaque.jpg" rel="grp">
-              <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0092-destaque.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-            </a>
-          </div>
-        </div>
-
-        <%= render partial: 'search_box' %>
-
-      </div>
-    </div>
-
-    <div id="wrap" class="row">
-      <%= render partial: 'real_estates' %>
-
-      <script type="text/javascript">
-        function bodyLoad() {
-          parmValue = getParameterByName("myparm");
-          if(parmValue == 'alertMe') {
-            alert('Function successful');
-          }
-        }
-        function getParameterByName(name) {
-          var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-          return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-        }
-      </script>
-    </div><!--wrap-->
-
-    <footer>
-      <div class="row">
-        <div class="eight columns" style="color: #fff;">
-          <p>&copy; 2015 Bons Ares Imóveis  All Rights Reserved </p>
-          <p>Endereço: Rua Curuzu, 971 - Centro - Botucatu - SP  |  Cep 18600-060</p>
-          <p>Telefone:  (14)3882-6102  |  (14)9791-3069  |  (14)9762-5922  |  (14)9816-0966</p>
-        </div><!-- #access -->
-
-        <div class="four columns credits" style="color: #fff;">
-          Site desenvolvido por Camila Campos e Luisa Aguirra
-        </div>
-
-        <div class="four columns credits" style="color: #fff;">
-          <p>
-            Both phone and house images are courtesy of digitalart / <a href="http://www.freedigitalphotos.net" target="_blank">FreeDigitalPhotos.net</a>
-          </p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    function getParameterByName(name) {
+      var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+  </script>
+</div><!--wrap-->
