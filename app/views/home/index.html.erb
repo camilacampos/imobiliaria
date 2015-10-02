@@ -2,43 +2,18 @@
   <div class="twelve columns centered">
     <div class="eight columns">
       <!-- SLIDER HOME-->
+      <!-- OPÇAO 1: deixar estático -->
+      <!-- OPÇAO 2: mostrar 3 primeiros cadastrados, -->
       <div class="featured">
-        <script type="text/javascript">
-          $(window).ready(function() {
-            $('.featured').orbit({
-              animation: 'horizontal-push', // fade, horizontal-slide, vertical-slide, horizontal-push
-              animationSpeed: 4000, // how fast animtions are
-              timer: true, // true or false to have the timer
-              resetTimerOnClick: false, // true resets the timer instead of pausing slideshow progress
-              advanceSpeed: 4000, // if timer is enabled, time between transitions
-              pauseOnHover: true, // if you hover pauses the slider
-              startClockOnMouseOut: true, // if clock should start on MouseOut
-              startClockOnMouseOutAfter: 4000, // how long after MouseOut should the timer start again
-              directionalNav: true // manual advancing directional navs
-            });
-          });
-        </script>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/11/home.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/11/home.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0079-destaque.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0079-destaque.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/12/Home.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/12/Home.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0081-destaque1.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/05/0081-destaque1.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0075-d.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0075-d.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0100-destaque1.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0100-destaque1.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
-        <a href="http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0092-destaque.jpg" rel="grp">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/06/0092-destaque.jpg&amp;w=1024&amp;h=669&amp;q=100" alt="" />
-        </a>
+        <%= link_to real_estate_path('home') do %>
+          <%= image_tag 'casa1.jpg', style: 'w' %>
+        <% end %>
+<!--         <%= link_to real_estate_path('home') do %>
+          <%= image_tag 'casa2.jpg' %>
+        <% end %>
+        <%= link_to real_estate_path('home') do %>
+          <%= image_tag 'casa3jpg' %>
+        <% end %> -->
       </div>
     </div>
 
@@ -49,17 +24,4 @@
 
 <div id="wrap" class="row">
   <%= render partial: 'real_estates' %>
-
-  <script type="text/javascript">
-    function bodyLoad() {
-      parmValue = getParameterByName("myparm");
-      if(parmValue == 'alertMe') {
-        alert('Function successful');
-      }
-    }
-    function getParameterByName(name) {
-      var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-    }
-  </script>
 </div><!--wrap-->

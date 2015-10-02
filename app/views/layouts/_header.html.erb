@@ -17,7 +17,9 @@
 
   <div class="row is-bg-white">
     <div class="four columns logo-layer">
-      <a href="http://www.bonsaresimoveis.com.br"><img src="http://www.bonsaresimoveis.com.br/wp-content/uploads/2013/09/bonsares-logo.jpg" alt="home" /></a>
+      <%= link_to root_path do %>
+        <%= image_tag 'aguirra-logo.jpg', alt: 'Home' %>
+      <% end %>
     </div>
     <!-- CRECI
     <div class="three columns header-box hide-for-small">
@@ -25,13 +27,13 @@
     </div>
     -->
     <div class="four columns hide-for-small header-box">
-      <img class="header-img" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/images/blue_phone.png" alt="">
+      <%= image_tag 'blue_phone.png', class: 'header-img', alt: '(14) 3882 - 6102' %>
       <p class="header-text">
         <span>(14) 3882 - 6102</span>
       </p>
     </div>
     <div class="four columns hide-for-small header-box">
-      <img class="header-img" src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/images/home-icon.png" alt="">
+      <%= image_tag 'home-icon.png', class: 'header-img', alt: 'Rua Curuzu, 971 - Centro - Botucatu' %>
       <p class="header-text">
         Rua Curuzu, 971 - Centro - Botucatu
       </p>

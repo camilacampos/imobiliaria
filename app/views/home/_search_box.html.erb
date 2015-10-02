@@ -1,24 +1,22 @@
-<div id="sidebar" class="four columns">
+<%= form_tag real_estates_path, method: 'get', class: 'four columns' do %>
   <div class="sidebar-box search-listings ">
     <h3>Encontre seu imóvel:</h3>
-    <p>
-      <input type="radio" name="preco" onClick="show_buy()" checked="checked" value="0">Compra</input>
-      <input type="radio" name="preco" onClick="show_rent()" value="1">Locação</input>
-    </p>
+    <div style="display: block;">
+      <%= label_tag 'Tipo', nil, class: 'sideText' %>
+      <%= select_tag(:tipo, options_for_select(RealEstateTipo.to_a) , { include_blank: 'Selecione', class: "busca" } )%>
 
-    <%= render partial: 'search_options' %>
+      <%= label_tag 'Dormitórios', nil, class: 'sideText'  %>
+      <%= select_tag(:dorms_quantity, options_for_select(options_to_dorms) , { include_blank: 'Selecione', class: "busca" } )%>
 
-    <div>
-      <a id="buscar" class="button soft-green">Buscar</a>
+      <%= label_tag 'Área', nil, class: 'sideText'  %>
+      <%= select_tag(:area, options_for_select(options_to_area) , { include_blank: 'Selecione', class: "busca" } )%>
+
+      <%= label_tag 'Preço', nil, class: 'sideText'  %>
+      <%= select_tag(:price, options_for_select(options_to_buy) , { include_blank: 'Selecione', class: "busca" } )%>
+
+      <%= label_tag 'Bairro', nil, class: 'sideText'  %>
+      <%= select_tag(:neighborhood, options_for_select(options_to_neighborhood) , { include_blank: 'Selecione', class: "busca" } )%>
     </div>
-
-    <br>
-
-    <div>
-      <a id="ref-search" class="button soft-green">Busca referência</a>
-    </div>
-
-    <div class="clear"></div>
+    <%= button_tag 'Buscar', class: 'button soft-green' %>
   </div>
-
-</div><!--end sidebar-->
+<% end %>

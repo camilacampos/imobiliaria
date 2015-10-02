@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'sobre' => 'home#about'
   get 'contato' => 'home#contact_info'
 
+  resources :real_estates, only: [:index, :show]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
