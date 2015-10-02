@@ -1,10 +1,10 @@
 class RealEstatesController < ApplicationController
   def index
-    @real_estates = RealEstateLoader(permitted_params)
+    @real_estates = RealEstateLoader.new(permitted_params).load
   end
 
   def show
-    redirect_to sobre_path
+    redirect_to real_estates_path
   end
 
   private

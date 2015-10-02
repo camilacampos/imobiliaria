@@ -4,20 +4,10 @@
       <!-- SLIDER HOME-->
       <!-- OPÇAO 1: deixar estático -->
       <!-- OPÇAO 2: mostrar 3 primeiros cadastrados, -->
-      <div class="featured">
-        <%= link_to real_estate_path('home') do %>
-          <%= image_tag 'casa1.jpg', style: 'w' %>
-        <% end %>
-<!--         <%= link_to real_estate_path('home') do %>
-          <%= image_tag 'casa2.jpg' %>
-        <% end %>
-        <%= link_to real_estate_path('home') do %>
-          <%= image_tag 'casa3jpg' %>
-        <% end %> -->
-      </div>
+      <%= image_tag 'bg.jpg', style: 'height: 440px; width: 700px;' %>
     </div>
 
-    <%= render partial: 'search_box' %>
+    <%= render partial: 'shared/search_box' %>
 
   </div>
 </div>

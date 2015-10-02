@@ -1,34 +1,22 @@
-<div id="content" class="twelve columns">
-  <div class="clearfix"></br></div>
 
-  <div class="row">
-    <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
-    <%= @real_estates.each do |real_estate| %>
-      <div class="four columns listing">
-        <div class="post-container short">
-          <% link_to real_estate_path(real_estate.id) do %>
-            <% image_tag real_estate.image_url %>
-          <% end %>
+<div class="row homepage-bg">
+  <div class="twelve columns centered">
+    <div class="eight columns">
+      <div class="clearfix"></br></div>
+      <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
+      <% @real_estates.each do |real_estate| %>
+        <div class="four columns listing">
+          <div class="post-container short">
+            <%= link_to real_estate_path(real_estate.id) do %>
+              <%= image_tag real_estate.image_url %>
+            <% end %>
+            <%= label_tag "#{real_estate.id} - #{real_estate.tipo}: #{real_estate.neighborhood.name}", nil, class: "h5", style: "text-align: center; margin: 20px; text-transform: uppercase;" %>
+            <%= label_tag "#{real_estate.area} m² - R$#{real_estate.price}", nil, class: "h5", style: "text-align: center; padding-bottom: 25px;text-transform: uppercase;" %>
+          </div>
         </div>
-      </div>
-    <% end %>
-
-<!--     <div class="four columns listing">
-      <div class="post-container short">
-      <a href="http://www.bonsaresimoveis.com.br/?listings=0131-vivendas-do-la-salle">
-        <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/10/0131-destaque.jpg&amp;w=960&amp;h=450&amp;q=100" alt="" />
-      </a>
-      <h5><a href="http://www.bonsaresimoveis.com.br/?listings=0131-vivendas-do-la-salle">0131 &#8211; Vivendas do La Salle </a></h5>
-      </div>
+      <% end %>
     </div>
-
-    <div class="four columns listing">
-      <div class="post-container short">
-        <a href="http://www.bonsaresimoveis.com.br/?listings=0119-centro">
-          <img src="http://www.bonsaresimoveis.com.br/wp-content/themes/realty/scripts/resize.php?src=http://www.bonsaresimoveis.com.br/wp-content/uploads/2014/10/100_1194.jpg&amp;w=960&amp;h=450&amp;q=100" alt="" />
-        </a>
-        <h5><a href="http://www.bonsaresimoveis.com.br/?listings=0119-centro">0119 &#8211; Centro </a></h5>
-      </div>
-    </div> -->
+    <%= render partial: 'shared/search_box' %>
+    <div class="clearfix"></br></div>
   </div><!--end row-->
 </div><!--end content-->
