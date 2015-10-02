@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002005058) do
+ActiveRecord::Schema.define(version: 20151002035401) do
 
   create_table "neighborhoods", force: :cascade do |t|
     t.string   "name"
@@ -25,10 +25,13 @@ ActiveRecord::Schema.define(version: 20151002005058) do
     t.string   "city"
     t.string   "image_url"
     t.integer  "dorms_quantity"
-    t.decimal  "area",           precision: 2
-    t.decimal  "price",          precision: 2
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.decimal  "area",            precision: 2
+    t.decimal  "price",           precision: 2
+    t.integer  "neighborhood_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
+
+  add_index "real_estates", ["neighborhood_id"], name: "index_real_estates_on_neighborhood_id"
 
 end

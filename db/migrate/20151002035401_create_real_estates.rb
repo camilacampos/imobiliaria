@@ -7,6 +7,8 @@ class CreateRealEstates < ActiveRecord::Migration
       t.integer :dorms_quantity
       t.decimal :area, precision: 2
       t.decimal :price, precision: 2
+
+      t.references :neighborhood, index: true
       t.timestamps null: false
     end
   end
