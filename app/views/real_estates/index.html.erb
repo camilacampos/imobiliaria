@@ -1,17 +1,17 @@
-
 <div class="row homepage-bg">
   <div class="twelve columns centered">
     <div class="eight columns">
       <div class="clearfix"></br></div>
-      <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
-      <% @real_estates.each do |real_estate| %>
-        <div class="four columns listing">
-          <div class="post-container short">
-            <%= link_to real_estate_path(real_estate.id) do %>
-              <%= image_tag real_estate.image_url %>
-            <% end %>
-            <%= label_tag "#{real_estate.id} - #{real_estate.tipo}: #{real_estate.neighborhood.name}", nil, class: "h5", style: "text-align: center; margin: 20px; text-transform: uppercase;" %>
-            <%= label_tag "#{real_estate.area} m² - R$#{real_estate.price}", nil, class: "h5", style: "text-align: center; padding-bottom: 25px;text-transform: uppercase;" %>
+        <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
+        <% @real_estates.each do |real_estate| %>
+          <div class="four columns listing">
+            <div class="post-container short">
+              <%= link_to real_estate do %>
+                <%= image_tag real_estate.image_url %>
+              <% end %>
+              <%= label_tag "#{real_estate.id} - #{real_estate.category_humanize}: #{real_estate.neighborhood_humanize}",
+                nil, class: "h5", style: "text-align: center; margin: 20px; text-transform: uppercase;" %>
+              <%= label_tag "#{real_estate.area} m² - R$#{real_estate.price}", nil, class: "h5", style: "text-align: center; padding-bottom: 25px;text-transform: uppercase;" %>
           </div>
         </div>
       <% end %>
@@ -20,3 +20,7 @@
     <div class="clearfix"></br></div>
   </div><!--end row-->
 </div><!--end content-->
+
+<br>
+<%= link_to 'New Real estate', new_real_estate_path %>
+<br>

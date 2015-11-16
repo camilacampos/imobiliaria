@@ -11,27 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002035401) do
-
-  create_table "neighborhoods", force: :cascade do |t|
-    t.string   "name"
-    t.string   "name_alias"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20151116005150) do
 
   create_table "real_estates", force: :cascade do |t|
-    t.string   "tipo"
-    t.string   "city"
-    t.string   "image_url"
+    t.string   "category"
     t.integer  "dorms_quantity"
-    t.decimal  "area",            precision: 2
-    t.decimal  "price",           precision: 2
-    t.integer  "neighborhood_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.decimal  "area",           precision: 2
+    t.decimal  "price",          precision: 2
+    t.string   "image_url"
+    t.string   "neighborhood"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
-
-  add_index "real_estates", ["neighborhood_id"], name: "index_real_estates_on_neighborhood_id"
 
 end

@@ -1,0 +1,19 @@
+<div id="content" class="twelve columns">
+  <div class="clearfix"></br></div>
+
+  <div class="row">
+    <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
+    <% RealEstate.order(:price).limit(3).each do |real_estate| %>
+      <div class="four columns listing">
+        <div class="post-container short">
+          <%= link_to real_estate_path(real_estate.id) do %>
+            <%= image_tag real_estate.image_url %>
+          <% end %>
+          <%= label_tag "#{real_estate.id} - #{real_estate.category_humanize}: #{real_estate.neighborhood_humanize}",
+            nil, class: "h5", style: "text-align: center; margin: 20px; text-transform: uppercase;" %>
+          <%= label_tag "#{real_estate.area} m² - R$#{real_estate.price}", nil, class: "h5", style: "text-align: center; padding-bottom: 25px;text-transform: uppercase;" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

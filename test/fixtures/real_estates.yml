@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  dorms_quantity: 1
+  area: 9.99
+  price: 9.99
+  neighborhood: MyString
+
+two:
+  category: MyString
+  dorms_quantity: 1
+  area: 9.99
+  price: 9.99
+  neighborhood: MyString

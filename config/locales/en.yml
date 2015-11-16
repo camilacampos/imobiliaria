@@ -21,7 +21,7 @@
 
 en:
   enumerations:
-    real_estate_tipo:
+    real_estate_categories:
       apto: 'Apartamento'
       area_de_lazer: 'Área de lazer'
       barracao: 'Barracão'
@@ -32,3 +32,14 @@ en:
       salao_comercial_residencia: 'Salao Comercial + Residencia'
       sitio: 'Sítio'
       terreno: 'Terreno'
+    neighborhoods:
+      iron_islands: 'Iron Islands'
+      dragonstone: 'Dragonstone'
+      highgarden: 'Highgarden'
+      dorne: 'Dorne'
+      valyria: 'Valyria'
+      westeros: 'Westeros'
+      castle_black: 'Castle Black'
+      evenfall: 'Evenfall'
+      winterfell: 'Winterfell'
+      braavos: 'Braavos'

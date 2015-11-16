@@ -25,7 +25,9 @@ body {
 a {
 	text-decoration:none;
 }
-a:hover {}
+a:hover {
+	background-color: transparent;
+}
 a img {border:none;}
 .alignleft{float:left;}
 .alignright{float:right;}
@@ -582,3 +584,4 @@ footer .eight.columns {padding:22px 0 0 5px;}
 		margin: 0.8em 0 !important;
 		height: 100px !important;
 	}
+}
