@@ -1,8 +1,8 @@
 class RealEstatesController < ApplicationController
   before_action :set_real_estate, only: [:show, :edit, :update, :destroy]
 
-  # GET /real_estates
-  # GET /real_estates.json
+  # POST /real_estates
+  # POST /real_estates.json
   def index
     @real_estates = RealEstateLoader.new(search_params).load
   end
@@ -25,6 +25,7 @@ class RealEstatesController < ApplicationController
   # POST /real_estates.json
   def create
     @real_estate = RealEstate.new(real_estate_params)
+    binding.pry
 
     respond_to do |format|
       if @real_estate.save

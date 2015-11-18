@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :real_estates
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,7 +10,9 @@ Rails.application.routes.draw do
   get 'sobre' => 'welcome#about'
   get 'contato' => 'welcome#contact'
 
-  resources :real_estates, only: [:index, :show]
+  post 'real_estates' => 'real_estates#index'
+  post 'real_estates/create' => 'real_estates#create'
+  resources :real_estates, only: [:show, :update, :edit, :destroy, :new]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

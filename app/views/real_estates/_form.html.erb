@@ -13,11 +13,12 @@
   <div class="real_estate_form" >
     <div class="field">
       <%= f.label :category %><br>
-      <%= f.text_field :category %>
+      <%= f.select(:category, options_for_select(RealEstateCategories.to_a) , { include_blank: 'Selecione', class: "busca" } )%>
     </div>
     <div class="field">
       <%= f.label :dorms_quantity %><br>
-      <%= f.number_field :dorms_quantity %>
+      <%= f.number_field : %>
+      <%= f.select(:dorms_quantity, options_to_dorms, { include_blank: 'Selecione', class: "busca" } )%>
     </div>
     <div class="field">
       <%= f.label :area %><br>
