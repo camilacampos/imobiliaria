@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'contato' => 'welcome#contact'
 
   post 'real_estates' => 'real_estates#index'
+  get 'real_estates' => 'real_estates#index'
   post 'real_estates/create' => 'real_estates#create'
   resources :real_estates, only: [:show, :update, :edit, :destroy, :new]
 
