@@ -7,7 +7,7 @@
           <div class="four columns listing">
             <div class="post-container short">
               <%= link_to real_estate do %>
-                <%= image_tag real_estate.image_url %>
+                <%= image_tag real_estate.image_url, style: "width: 200px; height: 200px;" %>
               <% end %>
               <%= label_tag "#{real_estate.id} - #{real_estate.category_humanize}: #{real_estate.neighborhood_humanize}",
                 nil, class: "h5", style: "text-align: center; margin: 20px; text-transform: uppercase;" %>

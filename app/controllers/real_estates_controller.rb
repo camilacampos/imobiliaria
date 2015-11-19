@@ -25,7 +25,6 @@ class RealEstatesController < ApplicationController
   # POST /real_estates.json
   def create
     @real_estate = RealEstate.new(real_estate_params)
-    binding.pry
 
     respond_to do |format|
       if @real_estate.save

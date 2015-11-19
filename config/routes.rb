@@ -10,10 +10,7 @@ Rails.application.routes.draw do
   get 'sobre' => 'welcome#about'
   get 'contato' => 'welcome#contact'
 
-  post 'real_estates' => 'real_estates#index'
-  get 'real_estates' => 'real_estates#index'
-  post 'real_estates/create' => 'real_estates#create'
-  resources :real_estates, only: [:show, :update, :edit, :destroy, :new]
+  resources :real_estates
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
