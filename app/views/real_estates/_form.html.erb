@@ -12,27 +12,27 @@
   <% end %>
   <div class="real_estate_form">
     <div class="field">
-      <b><%= f.label :category, style: "font-size:17px;"%><br>
+      <b><%= f.label :category, style: "font-size:17px;"%></b><br>
       <%= f.select(:category, RealEstateCategories.to_a , { include_blank: 'Selecione' } , style: "width: 300px;")%>
     </div>
     <div class="field">
-      <b><%= f.label :dorms_quantity, style: "font-size:17px;"%><br>
+      <b><%= f.label :dorms_quantity, style: "font-size:17px;"%></b><br>
       <%= f.select(:dorms_quantity, options_to_dorms, { include_blank: 'Selecione' } , style: "width: 300px;")%>
     </div>
     <div class="field">
-      <b><%= f.label :area, style: "font-size:17px;"%><br>
+      <b><%= f.label :area, style: "font-size:17px;"%></b><br>
       <%= f.text_field :area, style: "width: 300px;" %>
     </div>
     <div class="field">
-      <b><%= f.label :price, style: "font-size:17px;"%><br>
+      <b><%= f.label :price, style: "font-size:17px;"%></b><br>
       <%= f.text_field :price, style: "width: 300px;" %>
     </div>
     <div class="field">
-      <b><%= f.label :neighborhood, style: "font-size:17px;"%><br>
+      <b><%= f.label :neighborhood, style: "font-size:17px;"%></b><br>
       <%= f.select(:neighborhood, Neighborhoods.to_a, { include_blank: 'Selecione' } , style: "width: 300px;")%>
     </div>
     <div class="field" >
-      <b><%= f.label :image_url, style: "font-size:17px;"%><br>
+      <b><%= f.label :image_url, style: "font-size:17px;"%></b><br>
       <%= f.text_field :image_url, style: "width: 300px;" %>
     </div>
     <div class="actions" style="width: 300px; font-size: 18px;">
