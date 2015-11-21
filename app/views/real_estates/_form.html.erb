@@ -1,42 +1,50 @@
-<%= form_for @real_estate do |f| %>
-  <% if @real_estate.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@real_estate.errors.count, "error") %> prohibited this real_estate from being saved:</h2>
 
-      <ul>
-      <% @real_estate.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @real_estate, :html => {:class => 'eight centered columns'} do |f| %>
+    <% if @real_estate.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@real_estate.errors.count, "error") %> prohibited this real_estate from being saved:</h2>
+  
+        <ul>
+        <% @real_estate.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+  
+    <div class="sidebar-box search-listings search-wrap">
+      <h3></h3>
+      <div class="real_estate_form">
+        <div class="field">
+          <b><%= f.label :tipo, 'Tipo', :class => 'sideText' %></b><br>
+          <%= f.select(:category, RealEstateCategories.to_a , { include_blank: 'Selecione' } )%>
+        </div>
+        <div class="field">
+          <b><%= f.label :dorms_quantity, 'Dormitórios', :class => 'sideText' %></b><br>
+          <%= f.select(:dorms_quantity, options_to_dorms, { include_blank: 'Selecione' } )%>
+        </div>
+        <div class="field">
+          <b><%= f.label :area, 'Área (m²)', :class => 'sideText' %></b><br>
+          <%= f.text_field :area, style: "width: 100%;" %>
+        </div>
+        <div class="field">
+          <b><%= f.label :price, 'Preço (R$)', :class => 'sideText' %></b><br>
+          <%= f.text_field :price, style: "width: 100%;" %>
+        </div>
+        <div class="field">
+          <b><%= f.label :neighborhood, 'Bairro', :class => 'sideText' %></b><br>
+          <%= f.select(:neighborhood, Neighborhoods.to_a, { include_blank: 'Selecione' } )%>
+        </div>
+        <div class="field" >
+          <b><%= f.label :image_url, 'Image URL', :class => 'sideText' %></b><br>
+          <%= f.text_field :image_url, style: "width: 100%;" %>
+        </div>
+        <div class="actions" style="width: 100%; font-size: 18px;">
+          <%= f.submit 'Anunciar', :class => 'button soft-green' %>
+        </div>
+      </div>
+        
     </div>
-  <% end %>
-  <div class="real_estate_form">
-    <div class="field">
-      <b><%= f.label :category, style: "font-size:17px;"%></b><br>
-      <%= f.select(:category, RealEstateCategories.to_a , { include_blank: 'Selecione' } , style: "width: 300px;")%>
-    </div>
-    <div class="field">
-      <b><%= f.label :dorms_quantity, style: "font-size:17px;"%></b><br>
-      <%= f.select(:dorms_quantity, options_to_dorms, { include_blank: 'Selecione' } , style: "width: 300px;")%>
-    </div>
-    <div class="field">
-      <b><%= f.label :area, style: "font-size:17px;"%></b><br>
-      <%= f.text_field :area, style: "width: 300px;" %>
-    </div>
-    <div class="field">
-      <b><%= f.label :price, style: "font-size:17px;"%></b><br>
-      <%= f.text_field :price, style: "width: 300px;" %>
-    </div>
-    <div class="field">
-      <b><%= f.label :neighborhood, style: "font-size:17px;"%></b><br>
-      <%= f.select(:neighborhood, Neighborhoods.to_a, { include_blank: 'Selecione' } , style: "width: 300px;")%>
-    </div>
-    <div class="field" >
-      <b><%= f.label :image_url, style: "font-size:17px;"%></b><br>
-      <%= f.text_field :image_url, style: "width: 300px;" %>
-    </div>
-    <div class="actions" style="width: 300px; font-size: 18px;">
-      <%= f.submit %>
-    </div>
-  </div>
+  
 <% end %>

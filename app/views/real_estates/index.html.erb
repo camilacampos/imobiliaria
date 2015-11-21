@@ -3,18 +3,26 @@
     <div class="eight columns">
       <div class="clearfix"></br></div>
         <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
+        
+        <ul class="block-grid three-up">
         <% @real_estates.each do |real_estate| %>
-          <div class="four columns listing">
+          <li>
             <div class="post-container short">
               <%= link_to real_estate do %>
                 <%= image_tag real_estate.image_url, style: "width: 200px; height: 200px;" %>
-              <%= label_tag "#{real_estate.id} - #{real_estate.category_humanize}: #{real_estate.neighborhood_humanize}",
-                nil, class: "h5", style: "text-align: center; margin: 20px; text-transform: uppercase;" %>
-              <%= label_tag "#{real_estate.area} m² - R$#{real_estate.price}", nil, class: "h5", style: "text-align: center; padding-bottom: 25px;text-transform: uppercase;" %>
+                <div style="padding: 20px;">
+                  <%= label_tag "#{real_estate.id}: #{real_estate.category_humanize}",
+                    nil, class: "h5", style: "text-align: center; text-transform: uppercase;" %>
+                  <%= label_tag "#{real_estate.neighborhood_humanize}",
+                    nil, class: "h5", style: "text-align: center;" %>
+                  <%= label_tag "#{real_estate.area} m² - R$ #{real_estate.price}", 
+                    nil, class: "h5", style: "text-align: center; text-transform: uppercase;" %>
+                </div>
               <% end %>
-          </div>
-        </div>
-      <% end %>
+            </div>
+          </li>
+        <% end %>
+        </ul>
     </div>
     <%= render partial: 'shared/search_box' %>
     <div class="clearfix"></br></div>
@@ -22,5 +30,9 @@
 </div><!--end content-->
 
 <br>
-<%= link_to 'New Real estate', new_real_estate_path %>
+<div class="text-center">
+  <p>Quer vender o seu imóvel?</p>
+  <%= link_to 'Anuncie na Aguirra Imóveis!', new_real_estate_path, class: 'button soft-green', style: 'font-size: 18px' %>  
+</div>
+
 <br>

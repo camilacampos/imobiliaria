@@ -225,7 +225,7 @@ width:1024px;
 max-width:100%;
 }
 .row.homepage-bg h1 {
-font-family: 'Simonetta', cursive;
+font-family: 'Kite One', sans-serif;
 font-size:65px;
 font-weight:300;
 color:#fff;
@@ -323,7 +323,7 @@ a.comment-reply-link, #cancel-comment-reply-link {font-family:Georgia, "Times Ne
 #access {
 	background: #5481C0;
 	height:33px;
-	font-family: 'Simonetta', cursive;
+	font-family: 'Kite One', sans-serif;
 	font-weight:300;
 	font-size:14px;
 	text-transform:uppercase;

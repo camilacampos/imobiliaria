@@ -1,6 +1,10 @@
-<h1>Editing Real Estate</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @real_estate %> |
-<%= link_to 'Back', real_estates_path %>
+<div class="row homepage-bg">
+    <h1 class="text-center">Editar anúncio</h1>
+    
+    <%= render 'form' %>
+    
+    <div style="padding: 15px; margin-bottom: 10px;" class="text-center">
+        <%= link_to 'Ver anúncio', @real_estate %> |
+        <%= link_to 'Voltar', real_estates_path %>
+    </div>
+</div>
