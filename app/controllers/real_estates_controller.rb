@@ -1,5 +1,6 @@
 class RealEstatesController < ApplicationController
   before_action :set_real_estate, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :update, :new, :edit]
 
   # POST /real_estates
   # POST /real_estates.json

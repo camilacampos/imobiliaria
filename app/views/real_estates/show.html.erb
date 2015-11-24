@@ -15,20 +15,22 @@
 				<div class="post-content">
 					<h3>Informações Gerais</h3>
 					<ul>
-						<li><strong>Tipo:</strong> <%= @real_estate.category %></li>
+						<li><strong>Tipo:</strong> <%= @real_estate.category_humanize %></li>
 						<li><strong>Dormitórios:</strong> <%= @real_estate.dorms_quantity %></li>
 						<li><strong>Área:</strong> <%= @real_estate.area %> m²</li>
 						<li><strong>Preço:</strong> R$ <%= @real_estate.price %></li>
-						<li><strong>Bairro:</strong> <%= @real_estate.neighborhood %></li>
+						<li><strong>Bairro:</strong> <%= @real_estate.neighborhood_humanize %></li>
 					</ul>
 
 					<div class="text-center">
-						<button class='button soft-green'>Fazer oferta</button>
+						<%= link_to 'Fazer oferta', contato_path, class: 'button soft-green' %>
 					</div>
 				</div>
 
 				<div style="margin: 20px 0; padding: 15px; border-top: 1px solid #ccc;" class="text-center">
-					<%= link_to 'Editar anúncio', edit_real_estate_path(@real_estate) %> |
+					<% if user_signed_in? %>
+						<%= link_to 'Editar anúncio', edit_real_estate_path(@real_estate)  %> |
+					<% end %>
 					<%= link_to 'Voltar', real_estates_path %>
 				</div>
 			</div>

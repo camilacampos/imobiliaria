@@ -3,7 +3,7 @@
     <div class="eight columns">
       <div class="clearfix"></br></div>
         <h3 id="latest-listings"><span>Imóveis à venda</span></h3>
-        
+
         <ul class="block-grid three-up">
         <% @real_estates.each do |real_estate| %>
           <li>
@@ -15,7 +15,7 @@
                     nil, class: "h5", style: "text-align: center; text-transform: uppercase;" %>
                   <%= label_tag "#{real_estate.neighborhood_humanize}",
                     nil, class: "h5", style: "text-align: center;" %>
-                  <%= label_tag "#{real_estate.area} m² - R$ #{real_estate.price}", 
+                  <%= label_tag "#{real_estate.area} m² - R$ #{real_estate.price}",
                     nil, class: "h5", style: "text-align: center; text-transform: uppercase;" %>
                 </div>
               <% end %>
@@ -31,8 +31,12 @@
 
 <br>
 <div class="text-center">
-  <p>Quer vender o seu imóvel?</p>
-  <%= link_to 'Anuncie na Aguirra Imóveis!', new_real_estate_path, class: 'button soft-green', style: 'font-size: 18px' %>  
+  <% if user_signed_in? %>
+    <%= link_to 'Cadastro de novos imóveis!', new_real_estate_path, class: 'button soft-green', style: 'font-size: 18px' %>
+  <% else %>
+    <p>Quer vender o seu imóvel?</p>
+    <%= link_to 'Anuncie na Aguirra Imóveis!', contato_path, class: 'button soft-green', style: 'font-size: 18px' %>
+  <% end %>
 </div>
 
 <br>

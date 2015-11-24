@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="twelve columns centered">
+    <div id="content" class="twelve columns">
+      <div class="post-container short">
+        <div class="post-title" style="text-transform: uppercase; text-align: center; padding: 20px;">
+          <h1>Log in</h1>
+        </div>
+
+        <div class="post-content" style="text-align: center; padding-bottom: 20px; margin-bottom: 30px">
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Log in", class: "busca soft-green", style: '' %>
+            </div>
+          <% end %>
+
+        </div>
+
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

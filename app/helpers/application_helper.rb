@@ -37,4 +37,12 @@ module ApplicationHelper
       ['Acima de R$ 800000', [800000, 1_000_000_000]],
     ]
   end
+
+  def login_path
+    if user_signed_in?
+      link_to 'Log Out', destroy_user_session_path, method: :delete
+    else
+      link_to 'Log In', new_user_session_path
+    end
+  end
 end
