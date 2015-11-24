@@ -1,39 +1,39 @@
 <div class="row">
-  <div class="twelve columns centered">
-    <div id="content" class="eight columns">
+	<div class="twelve columns centered">
+		<div id="content" class="eight columns">
 			<div class="post-container short">
-	      <div class="post-title" style="text-transform: uppercase;">
+				<div class="post-title" style="text-transform: uppercase;">
 					<h1><%= @real_estate.category %> em <%= @real_estate.neighborhood %></h1>
 				</div>
-	
-	      <div class="row">
-					<%= image_tag @real_estate.image_url, style: 'width: 100%' %>
-	      </div>
-	
-	      <p id="notice"><%= notice %></p>
-	      
+
+				<div class="row" style="text-align: center;">
+					<%= image_tag @real_estate.image_url, style: 'width: 550px;' %>
+				</div>
+
+				<p id="notice"><%= notice %></p>
+
 				<div class="post-content">
 					<h3>Informações Gerais</h3>
 					<ul>
-					  <li><strong>Tipo:</strong> <%= @real_estate.category %></li>
-					  <li><strong>Dormitórios:</strong> <%= @real_estate.dorms_quantity %></li>
-					  <li><strong>Área:</strong> <%= @real_estate.area %> m²</li>
-					  <li><strong>Preço:</strong> R$ <%= @real_estate.price %></li>
+						<li><strong>Tipo:</strong> <%= @real_estate.category %></li>
+						<li><strong>Dormitórios:</strong> <%= @real_estate.dorms_quantity %></li>
+						<li><strong>Área:</strong> <%= @real_estate.area %> m²</li>
+						<li><strong>Preço:</strong> R$ <%= @real_estate.price %></li>
 						<li><strong>Bairro:</strong> <%= @real_estate.neighborhood %></li>
 					</ul>
-	        
-	        <div class="text-center">
-	          <button class='button soft-green'>Fazer oferta</button>
-	        </div>
+
+					<div class="text-center">
+						<button class='button soft-green'>Fazer oferta</button>
+					</div>
 				</div>
-				
-	      <div style="margin: 20px 0; padding: 15px; border-top: 1px solid #ccc;" class="text-center">
-		      <%= link_to 'Editar anúncio', edit_real_estate_path(@real_estate) %> |
-		      <%= link_to 'Voltar', real_estates_path %>
-	      </div>
+
+				<div style="margin: 20px 0; padding: 15px; border-top: 1px solid #ccc;" class="text-center">
+					<%= link_to 'Editar anúncio', edit_real_estate_path(@real_estate) %> |
+					<%= link_to 'Voltar', real_estates_path %>
+				</div>
 			</div>
 		</div>
 		<%= render partial: 'shared/search_box' %>
-    <div class="clearfix"></br></div>
-  </div>
+		<div class="clearfix"></br></div>
+	</div>
 </div>

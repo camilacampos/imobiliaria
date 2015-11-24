@@ -42,4 +42,6 @@ Rails.application.configure do
   # Enable the asset pipeline
   config.assets.enabled = false
   config.serve_static_files = false
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
